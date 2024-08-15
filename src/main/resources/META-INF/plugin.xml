@@ -12,6 +12,16 @@
         <toolWindow factoryClass="com.github.harts.scssvartocssvar.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
     </extensions>
 
+    <actions>
+        <action id="RefactorScssToCssAction"
+                class="com.github.harts.scssvartocssvar.RefactorScssVarToCssAction"
+                text="Refactor SCSS Variables to CSS Variables"
+                description="Refactor all SCSS variables to CSS variables across the project">
+            <add-to-group group-id="RefactoringMenu" anchor="last"/>
+            <keyboard-shortcut keymap="Default" first-keystroke="alt shift C"/>
+        </action>
+    </actions>
+
     <applicationListeners>
         <listener class="com.github.harts.scssvartocssvar.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
     </applicationListeners>
